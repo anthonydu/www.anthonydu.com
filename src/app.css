@@ -3,3 +3,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+	@apply sm:tall:snap-y sm:tall:snap-mandatory scroll-smooth bg-black font-iceland text-white;
+}
+
+body {
+	@apply overscroll-none;
+}
+
+a {
+	@apply transition-transform duration-300 hover:scale-110;
+}
+
+section {
+	@apply sm:tall:h-screen flex h-max min-h-screen snap-start snap-always items-center justify-center pt-16;
+}
+
+h2 {
+	@apply text-4xl;
+}
+h3 {
+	@apply text-2xl;
+}
+h4 {
+	@apply text-xl;
+}
