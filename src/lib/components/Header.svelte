@@ -124,3 +124,9 @@
 		></div>
 	</nav>
 </header>
+
+<style lang="postcss">
+	a {
+		@apply transition-transform duration-300 hover:scale-110;
+	}
+</style>

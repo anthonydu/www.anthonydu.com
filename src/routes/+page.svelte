@@ -139,10 +139,6 @@
 <section id="contact"></section>
 
 <style lang="postcss">
-	a {
-		@apply transition-transform duration-300 hover:scale-110;
-	}
-
 	section {
 		@apply flex h-max min-h-screen snap-start snap-always items-center justify-center pt-16 sm:tall:h-screen;
 	}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-	@apply scroll-smooth bg-black font-iceland text-white sm:tall:snap-y sm:tall:snap-mandatory;
+	@apply scroll-smooth bg-black font-iceland text-white [scrollbar-width:none] sm:tall:snap-y sm:tall:snap-mandatory [&::-webkit-scrollbar]:hidden;
 }
 
 body {
