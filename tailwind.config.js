@@ -14,7 +14,7 @@ export default {
 				iceberg: '"Iceberg", sans-serif'
 			},
 			screens: {
-				tall: { min: '600px' }
+				tall: { raw: '(min-height: 600px)' }
 			}
 		}
 	},

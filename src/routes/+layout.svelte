@@ -5,6 +5,6 @@
 
 <Header />
 
-<main class="mx-auto max-w-6xl">
+<main>
 	<slot />
 </main>

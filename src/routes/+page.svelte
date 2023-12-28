@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import Bubbles from '$lib/components/Bubbles.svelte';
 	import ShowInView from '$lib/components/ShowInView.svelte';
 	import nclib from '$lib/img/nclib.webp';
 	import ncssc from '$lib/img/ncssc.webp';
@@ -8,10 +9,29 @@
 </script>
 
 <section id="home">
+	<Bubbles
+		words={[
+			'Fast<br>Learner',
+			'Team<br>Player',
+			'Observant',
+			'Motivated',
+			'Curious',
+			'Creative',
+			'Multilingual',
+			'Problem<br>Solver',
+			'Adaptable',
+			'Critical<br>Thinker'
+		]}
+	/>
 	<h1
-		class="absolute font-iceberg leading-none [font-size:10vw] sm:left-1/3 sm:-translate-x-1/2 sm:text-6xl"
+		class="pointer-events-none absolute flex flex-col font-iceberg leading-none *:w-max *:bg-black sm:left-1/3 sm:-translate-x-1/2 lg:left-1/4"
 	>
-		Hi there!<br />I'm Anthony Du
+		<p class="[font-size:12vw] sm:text-6xl">Hi there!</p>
+		<p class="[font-size:12vw] sm:text-6xl">I'm Anthony Du</p>
+		<br />
+		<p class="leading-[7vw] [font-size:5vw] sm:text-3xl">Software Engineer</p>
+		<p class="leading-[7vw] [font-size:5vw] sm:text-3xl">Full Stack Developer</p>
+		<br />
 	</h1>
 </section>
 
@@ -119,6 +139,24 @@
 <section id="contact"></section>
 
 <style lang="postcss">
+	a {
+		@apply transition-transform duration-300 hover:scale-110;
+	}
+
+	section {
+		@apply flex h-max min-h-screen snap-start snap-always items-center justify-center pt-16 sm:tall:h-screen;
+	}
+
+	h2 {
+		@apply text-4xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+
 	#about img.logo {
 		@apply float-left mr-2 h-12 w-12 rounded;
 	}
