@@ -93,11 +93,15 @@
 		class="mt-1 hidden h-10 justify-self-center sm:col-span-2 sm:block"
 		src="https://skillicons.dev/icons?i=java,py,js,ts,svelte,react,nextjs,c,cpp,postgresql&theme=dark"
 		alt="Skills: Java, Python, TypeScript, C, C++, Next.js, Tailwind CSS, Supabase"
+		width={461.875}
+		height={40}
 	/>
 	<img
 		class="mt-1 h-20 justify-self-center sm:hidden"
 		src="https://skillicons.dev/icons?i=java,py,js,ts,svelte,react,nextjs,c,cpp,postgresql&theme=dark&perline=5"
 		alt="Skills: Java, Python, TypeScript, C, C++, Next.js, Tailwind CSS, Supabase"
+		width={209.492}
+		height={80}
 	/>
 </ShowInView>
 
