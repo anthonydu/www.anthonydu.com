@@ -3,6 +3,14 @@
 	src: url('/fonts/Apple-II.woff2');
 }
 
+/*
+pyftsubset XinYiGuanHeiTi.woff2 \
+--output-file=XinYiGuanHeiTi-subset.woff2 \
+--flavor=woff2 \
+--text=載入中學習能力協作洞察積極性好奇心創造多語解難適應批判思維關於我教育英屬哥倫比亞大計算機科理士至今北卡羅來納州立工程經驗初級支援分析師部生技圖書館營運助的個人網誌站使用動態路由術搭建克隆一全端實時更新附有即通訊功聯絡主介面項目嘗試拖姓名電郵電話號碼息傳送已達嗨你是軟體租屋評和 \
+--unicodes=U+0020-007F,U+2018-201F,U+3000-301F,U+FF00-FF5F
+*/
+
 @font-face {
 	font-family: 'Heiti';
 	src: url('/fonts/XinYiGuanHeiTi-subset.woff2');

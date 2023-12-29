@@ -21,7 +21,7 @@
 		]}
 	/>
 	<h1
-		class="pointer-events-none absolute flex flex-col font-iceberg leading-none *:w-max *:bg-black sm:left-1/3 sm:-translate-x-1/2 lg:left-1/4"
+		class="pointer-events-none absolute flex flex-col leading-none *:w-max *:bg-black sm:left-1/3 sm:-translate-x-1/2 lg:left-1/4"
 	>
 		<p class="[font-size:12vw] sm:text-6xl">嗨，你好!</p>
 		<p class="[font-size:12vw] sm:text-6xl">我是 Anthony Du</p>
