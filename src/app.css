@@ -1,4 +1,15 @@
 @font-face {
+	font-family: 'Iceland';
+	src: url('/fonts/Iceland-Regular.woff2');
+}
+
+@font-face {
+	font-family: 'Iceberg';
+	src: url('/fonts/Iceberg-Regular.woff2');
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'Apple II';
 	src: url('/fonts/Apple-II.woff2');
 }

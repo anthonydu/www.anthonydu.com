@@ -109,7 +109,7 @@
 		@apply text-2xl;
 	}
 	h4 {
-		@apply text-xl;
+		@apply text-xl leading-[1.2];
 	}
 	img.logo {
 		@apply float-left mr-2 h-12 w-12 rounded;

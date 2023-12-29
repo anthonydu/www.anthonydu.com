@@ -5,6 +5,36 @@
 	import Contact from './Contact.svelte';
 </script>
 
+<svelte:head>
+	<title>Anthony Du</title>
+	<meta
+		name="description"
+		content="A motivated computer science and engineering student with strong passion for cutting edge technologies, who seeks to learn, innovate, and solve challenging problems."
+	/>
+	<meta name="theme-color" content="#000000" />
+
+	<link rel="canonical" href="https://www.anthonydu.com" />
+	<link rel="alternate" hreflang="en" href="https://www.anthonydu.com" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://www.anthonydu.com/zh" />
+
+	<meta property="og:title" content="Anthony Du" />
+	<meta
+		property="og:description"
+		content="A motivated computer science and engineering student with strong passion for cutting edge technologies, who seeks to learn, innovate, and solve challenging problems."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.anthonydu.com" />
+	<meta property="og:image" content="https://www.anthonydu.com/og-image.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="627" />
+	<meta property="og:image:alt" content="Anthony Du" />
+	<meta property="og:site_name" content="Anthony Du" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="zh_TW" />
+
+	<meta name="robots" content="nofollow, noarchive, noimageindex, nosnippet" />
+</svelte:head>
+
 <section class="!h-screen" id="home">
 	<Bubbles
 		words={[

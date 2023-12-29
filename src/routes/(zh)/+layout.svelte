@@ -121,7 +121,12 @@
 				<Svg name="music" />
 			</a>
 		</div>
-		<button class="sm:hidden" type="button" on:click={() => (burgerClicked = !burgerClicked)}>
+		<button
+			class="sm:hidden"
+			type="button"
+			aria-label="菜單"
+			on:click={() => (burgerClicked = !burgerClicked)}
+		>
 			<Svg name="hamburger" class="absolute left-6 top-6 h-[1.125rem]" />
 		</button>
 		<div
@@ -132,7 +137,7 @@
 </header>
 
 <footer
-	class="fixed bottom-0 z-50 w-full text-center text-sm underline decoration-dotted *:!font-sans"
+	class="fixed bottom-0 z-50 w-full bg-black text-center text-sm underline decoration-dotted *:!font-sans"
 >
 	<a
 		class="peer hover:decoration-solid"
@@ -143,7 +148,7 @@
 		&copy;&nbsp;2023&nbsp;Anthony&nbsp;Du&nbsp;&middot;
 		從&#8288;心&#8288;開&#8288;始&#8288;，&#8288;用&#8288;愛&#8288;構&#8288;建&nbsp;&hearts;
 	</a>
-	<a class="whitespace-nowrap hover:decoration-solid" href="/en"> &nbsp;&middot; English 英文 </a>
+	<a class="whitespace-nowrap hover:decoration-solid" href="/en">&middot; English 英文</a>
 	<p
 		class="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 rounded-full border bg-black px-2 py-px text-xs opacity-0 transition-all peer-hover:-top-5 peer-hover:opacity-100"
 	>

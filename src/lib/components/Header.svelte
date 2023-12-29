@@ -115,7 +115,12 @@
 				<Svg name="music" />
 			</a>
 		</div>
-		<button class="sm:hidden" type="button" on:click={() => (burgerClicked = !burgerClicked)}>
+		<button
+			class="sm:hidden"
+			type="button"
+			aria-label="menu"
+			on:click={() => (burgerClicked = !burgerClicked)}
+		>
 			<Svg name="hamburger" class="absolute left-6 top-6 h-[1.125rem]" />
 		</button>
 		<div

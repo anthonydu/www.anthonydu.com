@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: duckduckbot
+Allow: /
+
+Sitemap: https://www.anthonydu.com/sitemap.xml
