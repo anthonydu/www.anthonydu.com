@@ -9,11 +9,14 @@
 
 	let parent: HTMLElement;
 
+	let attractiveBody: Matter.Body;
+	let render: Matter.Render;
+
 	onMount(() => {
 		// create engine, render
 		Matter.use(MatterAttractors);
 		const engine = Matter.Engine.create({ gravity: { scale: 0 } });
-		const render = Matter.Render.create({
+		render = Matter.Render.create({
 			element: parent,
 			engine: engine,
 			options: {
@@ -23,7 +26,7 @@
 		});
 
 		// create attractive body
-		const attractiveBody = Matter.Bodies.circle(
+		attractiveBody = Matter.Bodies.circle(
 			0,
 			0,
 			0,
@@ -104,18 +107,6 @@
 		const runner = Matter.Runner.create();
 		Matter.Runner.run(runner, engine);
 
-		// add resize listener
-		window.addEventListener('resize', () => {
-			Matter.Body.setPosition(attractiveBody, {
-				x: window.innerWidth * (window.innerWidth < parseInt(theme.screens.sm) ? 0.5 : 0.66),
-				y: window.innerHeight * 0.5
-			});
-			render.options.width = parent.clientWidth;
-			render.options.height = parent.clientHeight;
-			Matter.Render.setPixelRatio(render, window.devicePixelRatio);
-		});
-		window.dispatchEvent(new Event('resize'));
-
 		// add touch listener
 		parent.addEventListener('touchstart', (e) => {
 			mouse.button = -1;
@@ -136,7 +127,21 @@
 			mouse.element.removeEventListener('touchstart', (mouse as any).mousedown);
 			mouse.element.removeEventListener('touchend', (mouse as any).mouseup);
 		});
+
+		handleResize();
 	});
+
+	const handleResize = () => {
+		Matter.Body.setPosition(attractiveBody, {
+			x: window.innerWidth * (window.innerWidth < parseInt(theme.screens.sm) ? 0.5 : 0.66),
+			y: window.innerHeight * 0.5
+		});
+		render.options.width = parent.clientWidth;
+		render.options.height = parent.clientHeight;
+		Matter.Render.setPixelRatio(render, window.devicePixelRatio);
+	};
 </script>
+
+<svelte:window on:resize={handleResize} />
 
 <div class="relative h-full w-full font-iceberg" bind:this={parent}></div>
