@@ -35,7 +35,10 @@
 	<meta name="robots" content="nofollow, noarchive, noimageindex, nosnippet" />
 </svelte:head>
 
-<section class="!h-screen" id="home">
+<section
+	class="flex h-screen snap-start snap-always items-center justify-center overflow-hidden pt-16"
+	id="home"
+>
 	<Bubbles
 		words={[
 			'學習能力',
@@ -53,10 +56,9 @@
 	<h1
 		class="pointer-events-none absolute flex flex-col leading-none *:w-max *:bg-black sm:left-1/2 sm:-translate-x-1/2 md:left-1/3 lg:left-1/4"
 	>
-		<p class="py-2 [font-size:10vw] sm:text-6xl">嗨，你好!</p>
-		<p class="py-2 [font-size:10vw] sm:text-6xl">我是 Anthony Du</p>
-		<br />
-		<p class="py-2 [font-size:5vw] sm:text-3xl">全端軟體工程師</p>
+		<p class="py-2 [font-size:10vw] sm:text-5xl">嗨，你好!</p>
+		<p class="py-2 [font-size:10vw] sm:text-5xl">我是 Anthony Du</p>
+		<p class="mt-2 py-2 [font-size:5vw] sm:text-2xl">全端軟體工程師</p>
 		<br />
 	</h1>
 </section>
@@ -66,7 +68,7 @@
 <section id="contact"><Contact /></section>
 
 <style lang="postcss">
-	section {
+	section:not(#home) {
 		@apply flex h-max min-h-screen snap-start snap-always items-center justify-center pt-16 sm:tall:h-screen;
 	}
 </style>

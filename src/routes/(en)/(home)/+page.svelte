@@ -35,7 +35,10 @@
 	<meta name="robots" content="nofollow, noarchive, noimageindex, nosnippet" />
 </svelte:head>
 
-<section class="!h-screen" id="home">
+<section
+	class="flex h-screen snap-start snap-always items-center justify-center overflow-hidden pt-16"
+	id="home"
+>
 	<Bubbles
 		words={[
 			'Fast<br>Learner',
@@ -67,7 +70,7 @@
 <section id="contact"><Contact /></section>
 
 <style lang="postcss">
-	section {
+	section:not(#home) {
 		@apply flex h-max min-h-screen snap-start snap-always items-center justify-center pt-16 sm:tall:h-screen;
 	}
 </style>

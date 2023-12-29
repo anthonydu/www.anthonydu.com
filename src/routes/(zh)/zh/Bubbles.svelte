@@ -107,7 +107,7 @@
 		// add resize listener
 		window.addEventListener('resize', () => {
 			Matter.Body.setPosition(attractiveBody, {
-				x: window.innerWidth * (window.innerWidth < parseInt(theme.screens.sm) ? 1 / 2 : 2 / 3),
+				x: window.innerWidth * (window.innerWidth < parseInt(theme.screens.sm) ? 0.5 : 0.66),
 				y: window.innerHeight * 0.5
 			});
 			render.options.width = parent.clientWidth;

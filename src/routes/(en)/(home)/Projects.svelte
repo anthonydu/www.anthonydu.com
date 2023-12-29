@@ -6,7 +6,7 @@
 </script>
 
 <ShowInView
-	class="grid w-80 grid-cols-1 gap-y-10 text-center sm:w-auto sm:grid-cols-2 md:grid-cols-3"
+	class="grid w-80 max-w-6xl grid-cols-1 gap-y-10 text-center sm:w-auto sm:grid-cols-2 md:grid-cols-3"
 >
 	<div
 		class="flex scale-90 flex-col items-center transition-transform [&:has(>a:hover)]:scale-[.92]"

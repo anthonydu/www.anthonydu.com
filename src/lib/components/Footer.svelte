@@ -3,11 +3,11 @@
 >
 	<a
 		class="footer-group peer"
-		href="https://github.com/anthonydu/anthonydu.com-vite-ts"
+		href="https://github.com/anthonydu/www.anthonydu.com"
 		target="_blank"
 		rel="noopener"
 	>
-		&copy; 2023 Anthony Du &middot;{' '}
+		&copy; 2024 Anthony Du &middot;{' '}
 	</a>
 	<a class="hover:decoration-solid [@media(min-width:500px)]:hidden" href="/zh">
 		中文 Chinese

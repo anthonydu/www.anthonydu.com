@@ -59,17 +59,17 @@
 	} fixed left-0 top-0 w-full overflow-hidden border-b border-white backdrop-blur transition-all duration-1000 sm:transition-none`}
 >
 	<nav
-		class="mx-auto flex h-96 max-w-6xl flex-col items-center px-7 text-3xl sm:h-full sm:flex-row sm:justify-between sm:text-xl"
+		class="mx-auto flex h-96 max-w-6xl flex-col items-center px-7 text-2xl sm:h-full sm:flex-row sm:justify-between sm:text-lg"
 	>
-		<a class="flex h-16 items-center justify-center sm:h-auto" href="/">
+		<a class="flex h-16 items-center justify-center text-3xl sm:h-auto sm:text-xl" href="/zh">
 			<b class="!font-iceland">Anthony Du</b>
 		</a>
 
 		<div class="contents md:flex md:gap-16" bind:this={sectionLinks}>
-			<a class="flex h-16 items-center sm:h-auto" href="/#home">主介面</a>
-			<a class="flex h-16 items-center sm:h-auto" href="/#about">關於我</a>
-			<a class="flex h-16 items-center sm:h-auto" href="/#projects">個人項目</a>
-			<a class="flex h-16 items-center sm:h-auto" href="/#contact">聯絡我</a>
+			<a class="flex h-16 items-center sm:h-auto" href="#home">主介面</a>
+			<a class="flex h-16 items-center sm:h-auto" href="#about">關於我</a>
+			<a class="flex h-16 items-center sm:h-auto" href="#projects">個人項目</a>
+			<a class="flex h-16 items-center sm:h-auto" href="#contact">聯絡我</a>
 		</div>
 
 		<div
@@ -140,15 +140,29 @@
 	class="fixed bottom-0 z-50 w-full bg-black text-center text-sm underline decoration-dotted *:!font-sans"
 >
 	<a
-		class="peer hover:decoration-solid"
+		class="footer-group peer"
 		href="https://github.com/anthonydu/www.anthonydu.com"
 		target="_blank"
 		rel="noopener"
 	>
-		&copy;&nbsp;2023&nbsp;Anthony&nbsp;Du&nbsp;&middot;
-		從&#8288;心&#8288;開&#8288;始&#8288;，&#8288;用&#8288;愛&#8288;構&#8288;建&nbsp;&hearts;
+		&copy; 2024 Anthony Du &middot;{' '}
 	</a>
-	<a class="whitespace-nowrap hover:decoration-solid" href="/en">&middot; English 英文</a>
+	<a class="hover:decoration-solid [@media(min-width:500px)]:hidden" href="/en">
+		English 英文
+		<br />
+	</a>
+	<a
+		class="footer-group peer"
+		href="https://github.com/anthonydu/www.anthonydu.com"
+		target="_blank"
+		rel="noopener"
+	>
+		從心開始，用愛構建 &hearts;
+	</a>
+	<a class="hover:decoration-solid [@media(max-width:499px)]:hidden" href="/en">
+		{' '}
+		&middot; English 英文
+	</a>
 	<p
 		class="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 rounded-full border bg-black px-2 py-px text-xs opacity-0 transition-all peer-hover:-top-5 peer-hover:opacity-100"
 	>
