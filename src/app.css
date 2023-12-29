@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Apple II';
+	src: url('/fonts/Apple-II.woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

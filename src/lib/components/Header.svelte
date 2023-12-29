@@ -50,7 +50,7 @@
 <header
 	class={`${
 		burgerClicked ? 'h-96' : 'h-16'
-	} fixed left-0 top-0 z-50 w-full overflow-hidden border-b border-white backdrop-blur transition-all duration-1000 sm:transition-none`}
+	} fixed left-0 top-0 w-full overflow-hidden border-b border-white backdrop-blur transition-all duration-1000 sm:transition-none`}
 >
 	<nav
 		class="mx-auto flex h-96 max-w-6xl flex-col items-center px-7 text-3xl sm:h-full sm:flex-row sm:justify-between sm:text-xl"
@@ -60,10 +60,10 @@
 		</a>
 
 		<div class="contents md:flex md:gap-16" bind:this={sectionLinks}>
-			<a class="flex h-16 items-center sm:h-auto" href="#home">Home</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#about">About</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#projects">Projects</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#contact">Contact</a>
+			<a class="flex h-16 items-center sm:h-auto" href="/#home">Home</a>
+			<a class="flex h-16 items-center sm:h-auto" href="/#about">About</a>
+			<a class="flex h-16 items-center sm:h-auto" href="/#projects">Projects</a>
+			<a class="flex h-16 items-center sm:h-auto" href="/#contact">Contact</a>
 		</div>
 
 		<div

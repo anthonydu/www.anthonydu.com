@@ -17,7 +17,6 @@
 			element: parent,
 			engine: engine,
 			options: {
-				pixelRatio: window.devicePixelRatio,
 				wireframes: false,
 				background: 'black'
 			}
@@ -25,8 +24,8 @@
 
 		// create attractive body
 		const attractiveBody = Matter.Bodies.circle(
-			window.innerWidth * (window.innerWidth < parseInt(theme.screens.sm) ? 1 / 2 : 2 / 3),
-			window.innerHeight * 0.5,
+			0,
+			0,
 			0,
 			{
 				isStatic: true,
@@ -40,7 +39,8 @@
 						}
 					]
 				}
-			}
+			},
+			1
 		);
 
 		// create circles and words
@@ -57,12 +57,11 @@
 						lineWidth: 1.5
 					}
 				},
-				64
+				32
 			);
 			const p = document.createElement('p');
 			p.innerHTML = word;
 			p.classList.add(
-				'bubble-word',
 				'absolute',
 				'text-4xl',
 				'text-center',
@@ -88,8 +87,6 @@
 		const mouseConstraint = Matter.MouseConstraint.create(engine, {
 			mouse: mouse,
 			constraint: {
-				damping: 1,
-				stiffness: 0.1,
 				render: {
 					visible: false
 				}

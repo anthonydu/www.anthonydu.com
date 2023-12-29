@@ -8,7 +8,7 @@
 
 <IntersectionObserver once {element} let:intersecting>
 	<div
-		class={`${className} transition-all duration-1000 ${
+		class={`${className} transition-[opacity,transform] duration-1000 ${
 			intersecting ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 		} `}
 		bind:this={element}
