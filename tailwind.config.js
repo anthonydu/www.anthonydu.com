@@ -12,7 +12,8 @@ export default {
 			fontFamily: {
 				iceland: '"Iceland", sans-serif',
 				iceberg: '"Iceberg", sans-serif',
-				appleii: '"Apple II", sans-serif'
+				appleii: '"Apple II", sans-serif',
+				heiti: '"Heiti", sans-serif'
 			},
 			screens: {
 				tall: { raw: '(min-height: 600px)' }
