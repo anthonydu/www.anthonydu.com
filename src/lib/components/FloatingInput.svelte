@@ -7,7 +7,7 @@
 {#if display === 'input'}
 	<div class="relative h-full w-full">
 		<input
-			class="peer h-full w-full rounded-md border-2 border-white bg-transparent px-2.5 pb-3 pt-6 placeholder-transparent focus:outline-none"
+			class="peer h-full w-full rounded-md border-2 border-white bg-transparent px-2.5 pb-2 pt-6 placeholder-transparent focus:outline-none"
 			{...$$props}
 			{...$$restProps}
 		/>

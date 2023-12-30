@@ -8,7 +8,7 @@
 
 <IntersectionObserver once {element} let:intersecting>
 	<div
-		class={`${className} transition-[opacity,transform] duration-1000 ${
+		class={`observing-intersection ${className} transition-[opacity,transform] duration-1000 ${
 			intersecting ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
 		} `}
 		bind:this={element}
@@ -17,3 +17,11 @@
 		<slot />
 	</div>
 </IntersectionObserver>
+<noscript>
+	<style>
+		.observing-intersection {
+			opacity: 1 !important;
+			transform: translateY(0) !important;
+		}
+	</style>
+</noscript>

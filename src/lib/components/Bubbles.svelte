@@ -90,6 +90,8 @@
 		const mouseConstraint = Matter.MouseConstraint.create(engine, {
 			mouse: mouse,
 			constraint: {
+				damping: 1,
+				stiffness: 0.1,
 				render: {
 					visible: false
 				}
@@ -144,4 +146,4 @@
 
 <svelte:window on:resize={handleResize} />
 
-<div class="relative h-full w-full font-iceberg" bind:this={parent}></div>
+<div class="relative h-full w-full" bind:this={parent}></div>

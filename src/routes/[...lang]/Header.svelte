@@ -1,9 +1,11 @@
 <script lang="ts">
-	import '../../app.css';
-
 	import Svg from '$lib/components/Svg.svelte';
 	import { onMount } from 'svelte';
 	import theme from 'tailwindcss/defaultTheme';
+	import type { PageData } from './$types';
+	import { page } from '$app/stores';
+
+	export let locale: PageData['locale']['header'];
 
 	let w = 0;
 	let x = 0;
@@ -42,16 +44,18 @@
 		burgerClicked = false;
 	};
 
-	onMount(setRect);
+	onMount(() => {
+		const home = sectionLinks.querySelector('a:nth-child(1)')!;
+		const interval = setInterval(() => {
+			if (home.clientWidth !== w) setRect();
+			else clearInterval(interval);
+		}, 100);
+	});
 </script>
 
 <svelte:window on:resize={handleResize} />
 
 <svelte:document on:scroll={handleScroll} />
-
-<main>
-	<slot />
-</main>
 
 <header
 	class={`${
@@ -59,17 +63,25 @@
 	} fixed left-0 top-0 w-full overflow-hidden border-b border-white backdrop-blur transition-all duration-1000 sm:transition-none`}
 >
 	<nav
-		class="mx-auto flex h-96 max-w-6xl flex-col items-center px-7 text-2xl sm:h-full sm:flex-row sm:justify-between sm:text-lg"
+		class="mx-auto flex h-96 max-w-6xl flex-col items-center px-7 text-3xl sm:h-full sm:flex-row sm:justify-between sm:text-xl"
 	>
-		<a class="flex h-16 items-center justify-center text-3xl sm:h-auto sm:text-xl" href="/zh">
-			<b class="!font-iceland">Anthony Du</b>
+		<a class="flex h-16 items-center justify-center font-iceland sm:h-auto" href="/">
+			<b>{@html locale.title}</b>
 		</a>
 
 		<div class="contents md:flex md:gap-16" bind:this={sectionLinks}>
-			<a class="flex h-16 items-center sm:h-auto" href="#home">主介面</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#about">關於我</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#projects">個人項目</a>
-			<a class="flex h-16 items-center sm:h-auto" href="#contact">聯絡我</a>
+			<a class="flex h-16 items-center sm:h-auto" href={`${$page.url.pathname}#home`}>
+				{@html locale.home}
+			</a>
+			<a class="flex h-16 items-center sm:h-auto" href={`${$page.url.pathname}#about`}>
+				{@html locale.about}
+			</a>
+			<a class="flex h-16 items-center sm:h-auto" href={`${$page.url.pathname}#projects`}>
+				{@html locale.projects}
+			</a>
+			<a class="flex h-16 items-center sm:h-auto" href={`${$page.url.pathname}#contact`}>
+				{@html locale.contact}
+			</a>
 		</div>
 
 		<div
@@ -124,7 +136,7 @@
 		<button
 			class="sm:hidden"
 			type="button"
-			aria-label="菜單"
+			aria-label="menu"
 			on:click={() => (burgerClicked = !burgerClicked)}
 		>
 			<Svg name="hamburger" class="absolute left-6 top-6 h-[1.125rem]" />
@@ -136,44 +148,7 @@
 	</nav>
 </header>
 
-<footer
-	class="fixed bottom-0 z-50 w-full bg-black text-center text-sm underline decoration-dotted *:!font-sans"
->
-	<a
-		class="footer-group peer"
-		href="https://github.com/anthonydu/www.anthonydu.com"
-		target="_blank"
-		rel="noopener"
-	>
-		&copy; 2024 Anthony Du &middot;{' '}
-	</a>
-	<a class="hover:decoration-solid [@media(min-width:500px)]:hidden" href="/en">
-		English 英文
-		<br />
-	</a>
-	<a
-		class="footer-group peer"
-		href="https://github.com/anthonydu/www.anthonydu.com"
-		target="_blank"
-		rel="noopener"
-	>
-		從心開始，用愛構建 &hearts;
-	</a>
-	<a class="hover:decoration-solid [@media(max-width:499px)]:hidden" href="/en">
-		{' '}
-		&middot; English 英文
-	</a>
-	<p
-		class="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 rounded-full border bg-black px-2 py-px text-xs opacity-0 transition-all peer-hover:-top-5 peer-hover:opacity-100"
-	>
-		在GitHub上查看原始碼
-	</p>
-</footer>
-
 <style lang="postcss">
-	* {
-		@apply font-heiti;
-	}
 	a {
 		@apply transition-transform duration-300 hover:scale-110;
 	}

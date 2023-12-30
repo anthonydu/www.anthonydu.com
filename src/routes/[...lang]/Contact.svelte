@@ -1,54 +1,62 @@
 <script lang="ts">
-	import FloatingInput from '$lib/components/FloatingInput.svelte';
-	import ShowInView from '$lib/components/ShowInView.svelte';
+	import FloatingInput from '../../lib/components/FloatingInput.svelte';
+	import ShowInView from '../../lib/components/ShowInView.svelte';
 	import { sendForm } from '@emailjs/browser';
+	import type { PageData } from './$types';
 
-	let buttonText = '傳送';
+	export let locale: PageData['locale']['contact'];
+
+	let buttonText = locale.submit;
 	let disabled = false;
 </script>
 
 <ShowInView class="my-20 w-80 sm:w-[500px]">
-	<h1 class="mb-4 text-center text-4xl">聯絡我</h1>
+	<h1 class="mb-4 text-center text-4xl">{@html locale.title}</h1>
 	<form
-		class="grid grid-cols-2 gap-3 pb-3 [&_input]:font-sans [&_textarea]:font-sans"
+		class="grid grid-cols-2 gap-3 [&_input]:font-sans [&_textarea]:font-sans"
 		id="contact-form"
 		on:submit|preventDefault={() => {
-			buttonText = '傳送中...';
+			buttonText = locale.submitting;
 			disabled = true;
 			sendForm('zoho', 'template_zh', '#contact-form', 'guRHXdfHUTXd64TTc').then(
 				(result) => {
 					console.log(result);
-					buttonText = '已送達！';
+					buttonText = locale.submitted;
 				},
 				(error) => {
 					console.log(error);
-					buttonText = '傳送失敗！';
+					buttonText = locale.failed;
 				}
 			);
 		}}
 	>
 		<div>
-			<FloatingInput type="text" id="fname-input" name="full-name" placeholder="姓名*" required />
+			<FloatingInput type="text" id="name" name="name" placeholder={locale.name + '*'} required />
 		</div>
 
 		<div class="row-span-3">
-			<FloatingInput display="area" id="message-input" name="message" placeholder="訊息*" required
+			<FloatingInput
+				display="area"
+				id="message"
+				name="message"
+				placeholder={locale.message + '*'}
+				required
 			></FloatingInput>
 		</div>
 
 		<div>
 			<FloatingInput
 				type="email"
-				id="email-input"
+				id="email"
 				name="email"
-				placeholder="電郵*"
+				placeholder={locale.email + '*'}
 				autoCapitalize="none"
 				required
 			/>
 		</div>
 
 		<div>
-			<FloatingInput type="tel" id="phone-input" name="phone" placeholder="電話號碼" />
+			<FloatingInput type="tel" id="phone" name="phone" placeholder={locale.phone} />
 		</div>
 
 		<button
