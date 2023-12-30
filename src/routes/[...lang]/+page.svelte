@@ -19,8 +19,8 @@
 
 	<link rel="canonical" href={`https://www.anthonydu.com${data.canonical}`} />
 	<link rel="alternate" hreflang="x-default" href="https://www.anthonydu.com" />
-	<link rel="alternate" hreflang="en" href="https://www.anthonydu.com" />
-	<link rel="alternate" hreflang="zh-Hant" href="https://www.anthonydu.com/zh" />
+	<link rel="alternate" hreflang="en-us" href="https://www.anthonydu.com" />
+	<link rel="alternate" hreflang="zh-tw" href="https://www.anthonydu.com/zh" />
 
 	<meta property="og:title" content={locale.title} />
 	<meta property="og:description" content={locale.description} />
@@ -51,7 +51,6 @@
 		<br />
 		<p class="leading-[7vw] [font-size:5vw] sm:text-3xl">{@html locale.home[2]}</p>
 		<p class="leading-[7vw] [font-size:5vw] sm:text-3xl">{@html locale.home[3]}</p>
-		<br />
 	</h1>
 </section>
 

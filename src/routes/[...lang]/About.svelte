@@ -114,7 +114,7 @@
 	p {
 		@apply mt-1 w-max whitespace-nowrap text-sm;
 	}
-	img.logo {
+	.logo {
 		@apply h-12 w-12 rounded;
 	}
 </style>

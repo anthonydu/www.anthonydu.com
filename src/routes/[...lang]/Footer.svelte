@@ -18,7 +18,7 @@
 	</a>
 	<a
 		class="hover:decoration-solid [@media(min-width:500px)]:hidden"
-		href={$page.url.pathname === '/zh' ? '/en' : '/zh'}
+		href={$page.url.pathname === '/zh' ? '/' : '/zh'}
 	>
 		{@html locale[1]}
 		<br />
@@ -33,7 +33,7 @@
 	</a>
 	<a
 		class="hover:decoration-solid [@media(max-width:499px)]:hidden"
-		href={$page.url.pathname === '/zh' ? '/en' : '/zh'}
+		href={$page.url.pathname === '/zh' ? '/' : '/zh'}
 	>
 		{@html locale[3]}
 	</a>
