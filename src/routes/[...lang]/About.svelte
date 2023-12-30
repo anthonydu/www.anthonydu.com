@@ -1,10 +1,10 @@
 <script lang="ts">
 	import ShowInView from '../../lib/components/ShowInView.svelte';
-	import nclib from '$lib/images/nclib.webp';
-	import ncssc from '$lib/images/ncssc.webp';
-	import ncsu from '$lib/images/ncsu.webp';
-	import psych from '$lib/images/psych.webp';
-	import ubc from '$lib/images/ubc.webp';
+	import nclib from '$lib/images/nclib.webp?enhanced';
+	import ncssc from '$lib/images/ncssc.webp?enhanced';
+	import ncsu from '$lib/images/ncsu.webp?enhanced';
+	import psych from '$lib/images/psych.webp?enhanced';
+	import ubc from '$lib/images/ubc.webp?enhanced';
 	import type { PageData } from './$types';
 
 	export let locale: PageData['locale']['about'];
@@ -22,7 +22,7 @@
 	<h3 class="-mb-2 sm:col-span-2">{@html locale.education}</h3>
 	<div>
 		<a href="https://www.linkedin.com/school/universityofbc/" target="_blank" rel="noopener">
-			<img class="logo" src={ubc} alt="UBC Logo" />
+			<enhanced:img class="logo" src={ubc} alt="UBC Logo" />
 			<h4>
 				{@html locale.ubc[0]}
 			</h4>
@@ -35,7 +35,7 @@
 			target="_blank"
 			rel="noopener"
 		>
-			<img class="logo" src={ncsu} alt="NCSU Logo" />
+			<enhanced:img class="logo" src={ncsu} alt="NCSU Logo" />
 			<h4>
 				{@html locale.ncsu[0]}
 			</h4>
@@ -50,7 +50,7 @@
 			target="_blank"
 			rel="noopener"
 		>
-			<img class="logo" src={psych} alt="Psych Logo" />
+			<enhanced:img class="logo" src={psych} alt="Psych Logo" />
 			<h4>
 				{@html locale.psych[0]}
 			</h4>
@@ -59,7 +59,7 @@
 	</div>
 	<div>
 		<a href="https://www.linkedin.com/company/ncsu-libraries/" target="_blank" rel="noopener">
-			<img class="logo" src={nclib} alt="NCLib Logo" />
+			<enhanced:img class="logo" src={nclib} alt="NCLib Logo" />
 			<h4>
 				{@html locale.nclib[0]}
 			</h4>
@@ -72,7 +72,7 @@
 			target="_blank"
 			rel="noopener"
 		>
-			<img class="logo" src={ncssc} alt="NCSSC Logo" />
+			<enhanced:img class="logo" src={ncssc} alt="NCSSC Logo" />
 			<h4 class="leading-[1.2]">
 				{@html locale.ncssc[0]}
 			</h4>

@@ -9,13 +9,11 @@
 		<link rel="icon" sizes="512x512" href="%sveltekit.assets%/favicon-512x512.png" />
 		<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0X7HCECWPX"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0X7HCECWPX" defer></script>
 		<script id="ga">
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
@@ -25,6 +23,9 @@
 
 			gtag('config', 'G-0X7HCECWPX');
 		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 
 		<!-- Default Statcounter code for anthonydu.com  -->
 		<script type="text/javascript" id="statcounter">

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ShowInView from '../../lib/components/ShowInView.svelte';
-	import blog from '$lib/images/blog.webp';
-	import place from '$lib/images/place.webp';
-	import rentals from '$lib/images/rentals.webp';
+	import blog from '$lib/images/blog.webp?enhanced';
+	import place from '$lib/images/place.webp?enhanced';
+	import rentals from '$lib/images/rentals.webp?enhanced';
 	import type { PageData } from './$types';
 
 	export let locale: PageData['locale']['projects'];
@@ -22,7 +22,7 @@
 			rel="noopener"
 			aria-label="blog.anthonydu.com"
 		>
-			<img src={blog} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
+			<enhanced:img src={blog} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
 		</a>
 
 		<p class="relative top-2">{@html locale.blog[1]}</p>
@@ -39,7 +39,7 @@
 			rel="noopener"
 			aria-label="place.anthonydu.com"
 		>
-			<img src={place} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
+			<enhanced:img src={place} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
 		</a>
 
 		<p class="relative top-2">
@@ -58,7 +58,7 @@
 			rel="noopener"
 			aria-label="www.ratemyrentals.org"
 		>
-			<img src={rentals} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
+			<enhanced:img src={rentals} alt="Screenshot" class="aspect-[1.5] h-auto w-full" />
 		</a>
 
 		<p class="relative top-2">
