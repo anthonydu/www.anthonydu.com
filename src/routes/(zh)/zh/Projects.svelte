@@ -1,8 +1,8 @@
 <script>
 	import ShowInView from '$lib/components/ShowInView.svelte';
-	import blog from '$lib/img/blog.webp';
-	import place from '$lib/img/place.webp';
-	import rentals from '$lib/img/rentals.webp';
+	import blog from '$lib/images/blog.webp';
+	import place from '$lib/images/place.webp';
+	import rentals from '$lib/images/rentals.webp';
 </script>
 
 <ShowInView

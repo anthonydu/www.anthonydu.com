@@ -1,10 +1,10 @@
 <script lang="ts">
 	import ShowInView from '$lib/components/ShowInView.svelte';
-	import nclib from '$lib/img/nclib.webp';
-	import ncssc from '$lib/img/ncssc.webp';
-	import ncsu from '$lib/img/ncsu.webp';
-	import psych from '$lib/img/psych.webp';
-	import ubc from '$lib/img/ubc.webp';
+	import nclib from '$lib/images/nclib.webp';
+	import ncssc from '$lib/images/ncssc.webp';
+	import ncsu from '$lib/images/ncsu.webp';
+	import psych from '$lib/images/psych.webp';
+	import ubc from '$lib/images/ubc.webp';
 </script>
 
 <ShowInView
