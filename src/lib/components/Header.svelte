@@ -18,11 +18,11 @@
 		)!;
 		const currentLeft = currentLink.offsetLeft;
 		const currentWidth = currentLink.clientWidth;
-		const nextLink: HTMLElement = sectionLinks.querySelector(
+		const nextLink: HTMLElement | null = sectionLinks.querySelector(
 			`a:nth-child(${Math.ceil(currentSection)})`
-		)!;
-		const nextLeft = nextLink.offsetLeft;
-		const nextWidth = nextLink.clientWidth;
+		);
+		const nextLeft = nextLink?.offsetLeft ?? 0;
+		const nextWidth = nextLink?.clientWidth ?? 0;
 		const diffLeft = nextLeft - currentLeft;
 		const diffWidth = nextWidth - currentWidth;
 		const averageWidth = (currentWidth + nextWidth) / 2;
