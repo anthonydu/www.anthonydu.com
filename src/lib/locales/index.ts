@@ -26,7 +26,7 @@ export default {
 		about: {
 			title: 'About Me',
 			education: 'Education',
-			ubc: ['University of<br>British Columbia', 'Comp. Sci. B.Sc. | 3.9/4.0 | 2022 - Present'],
+			ubc: ['University of<br>British Columbia', 'Comp. Sci. B.Sc. | 3.840/4.0 | 2022 - Present'],
 			ncsu: ['North Carolina<br>State University', 'Comp. Engr. | 3.927/4.0 | 2021 - 2022'],
 			experience: 'Experience',
 			psych: ['Junior IT<br>Support Analyst', 'UBC Psychology | Sep &apos;22 - Feb &apos;23'],
@@ -92,7 +92,7 @@ export default {
 		about: {
 			title: '關於我',
 			education: '教育',
-			ubc: ['英屬哥倫比亞大學', '計算機科學・3.9/4.0・2022&#8201;-&#8201;至今'],
+			ubc: ['英屬哥倫比亞大學', '計算機科學・3.840/4.0・2022&#8201;-&#8201;至今'],
 			ncsu: ['北卡羅來納州立大學', '計算機工程・3.927/4.0・2021&#8201;-&#8201;22'],
 			experience: '工作經歷',
 			psych: ['初級IT支援分析師', 'UBC心理學部・22/09&#8201;-&#8201;23/02'],
