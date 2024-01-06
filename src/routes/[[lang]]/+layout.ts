@@ -2,7 +2,7 @@ import locales from '$lib/locales';
 import { error } from '@sveltejs/kit';
 
 export const load = async ({ params }) => {
-	if (params.lang === '')
+	if (params.lang === undefined)
 		return { locale: locales.en_US, canonical: '/', fonts: ['Iceland', 'Iceberg'] };
 	else if (params.lang === 'zh')
 		return { locale: locales.zh_TW, canonical: '/zh', fonts: ['Heiti', 'Heiti'] };
